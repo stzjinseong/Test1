@@ -94,6 +94,15 @@ package
 			spr_window.addEventListener(TouchEvent.TOUCH, onHover);	
 			bt_minimize.addEventListener(TouchEvent.TOUCH, onClickMinimize);
 			bt_close.addEventListener(TouchEvent.TOUCH, onClickClose);
+			
+		}
+		override public function dispose():void {
+			qd_titleBar.removeEventListeners();
+			qd_titleBar.removeEventListeners();
+			qd_titleBar.removeEventListeners();
+			spr_window.removeEventListeners();	
+			bt_minimize.removeEventListeners();
+			bt_close.removeEventListeners();
 		}
 		private function onHover(event:TouchEvent):void
 		{
@@ -106,14 +115,14 @@ package
 				}
 					// drag&drop된 윈도우 객체가 this인가?
 				else if (game.nowSelectedWindow == this) {
-					trace("Hover: 자신이라 셀렉팅 윈도우 소멸");
+					//trace("Hover: 자신이라 셀렉팅 윈도우 소멸");
 					game.nowSelectedWindow = null;
 				}
 					// drag&drop된 윈도우 객체가 자식리스트에 없고 drag&drop된 윈도우 객체의 자식리스트에 this가 없는가? 
 				else if(!isContain(game.nowSelectedWindow) 
 					&& !game.nowSelectedWindow.isContain(this) 
 					&& game.nowSelectedWindow.parent == null){
-					trace("Hover: 셀렉팅 윈도우를 자식으로 붙임");
+					//trace("Hover: 셀렉팅 윈도우를 자식으로 붙임");
 					// regist selected windows to child-array.
 					addChildWindow();
 					game.nowSelectedWindow = null;
@@ -188,7 +197,6 @@ package
 				this.dispose();
 			}
 		}
-		
 		public function isContain(obj:Window):Boolean {
 			if (arr_child.indexOf(obj) == -1)
 				return false;
