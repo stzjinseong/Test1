@@ -18,9 +18,9 @@ package
 		public var isSelecting:Boolean;
 				
 		// ui varialbe.
-		[Embed(source = "assets/texture/icon.png")]
+		[Embed(source = "../assets/texture/icon.png")]
 		private static const WindowIconBmp:Class;
-		[Embed(source = "assets/texture/iconBar.png")]
+		[Embed(source = "../assets/texture/iconBar.png")]
 		private static const WindowIconBarBmp:Class;
 		private var icon:Button;
 		

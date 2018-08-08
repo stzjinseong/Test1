@@ -23,9 +23,9 @@ package
 		private var targetRemovePoint:int;
 		
 		// ui varialbe.
-		[Embed(source = "assets/texture/fish0.png")]
+		[Embed(source = "../assets/texture/fish0.png")]
 		private static const Fish0Bmp:Class;
-		[Embed(source = "assets/texture/fish1.png")]
+		[Embed(source = "../assets/texture/fish1.png")]
 		private static const Fish1Bmp:Class;
 		private var fish0Texture:Texture;
 		private var fish1Texture:Texture;

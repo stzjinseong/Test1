@@ -27,9 +27,9 @@ package
 		private var preDragPos:Point;
 		
 		// ui varialbe.
-		[Embed(source = "assets/texture/button_30x30.png")]
+		[Embed(source = "../assets/texture/button_30x30.png")]
 		private static const WindowButtonBmp:Class;
-		[Embed(source = "assets/texture/buttonHover_30x30.png")]
+		[Embed(source = "../assets/texture/buttonHover_30x30.png")]
 		private static const WindowButtonHoverBmp:Class;
 		private var qd_bg_title:Quad;
 		private var qd_bg_page:Quad;
@@ -97,8 +97,6 @@ package
 			
 		}
 		override public function dispose():void {
-			qd_titleBar.removeEventListeners();
-			qd_titleBar.removeEventListeners();
 			qd_titleBar.removeEventListeners();
 			spr_window.removeEventListeners();	
 			bt_minimize.removeEventListeners();
