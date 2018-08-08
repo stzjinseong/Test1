@@ -1,5 +1,5 @@
-/.settings
-/bin-debug
-/.actionScriptProperties
-/.project
-/assets
+assets/
+.settings/
+bin-debug/
+.actionScriptProperties
+.project
